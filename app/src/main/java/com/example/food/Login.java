@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
 
     //variables for all input and buttons from Login window
-    Button createAccountBtn,LoginBtn;
+    Button createAccountBtn,LoginBtn,forgotpasswordBtn;
     EditText EmailAddress,Password;
     //check with database so creating instance
     FirebaseAuth fAuth;
@@ -33,6 +33,7 @@ public class Login extends AppCompatActivity {
         EmailAddress=findViewById(R.id.loginEmail);
         Password=findViewById(R.id.loginPassword);
         LoginBtn=findViewById(R.id.loginBtn);
+        forgotpasswordBtn=findViewById(R.id.forgotpasswordBtn);
 
         //Firebase variable
         fAuth=FirebaseAuth.getInstance();
@@ -42,6 +43,13 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),Register.class));
+            }
+        });
+
+        forgotpasswordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Passwordreset.class));
             }
         });
 

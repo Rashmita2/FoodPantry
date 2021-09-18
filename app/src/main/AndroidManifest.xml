@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.food">
+    package="com.example.food" >
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.CAMERA"
+    <uses-permission
+        android:name="android.permission.CAMERA"
         android:required="true"
-        android:requiredFeature="true"/>
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+        android:requiredFeature="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
     <uses-feature
         android:name="android.hardware.camera.any"
         android:required="true" />
@@ -17,27 +21,29 @@
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
 
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Food">
-        <activity android:name=".Additem"></activity>
+        android:theme="@style/Theme.Food" >
+        <activity
+            android:name=".Passwordreset"
+            android:exported="true" />
+        <activity android:name=".Additem" />
         <activity android:name=".Register" />
-        <activity android:name=".Login">
+        <activity android:name=".Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.media.action.IMAGE_CAPTURE" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Inventory"/>
-        <activity android:name=".EditProduct"/>
+        <activity android:name=".Inventory" />
+        <activity android:name=".EditProduct" />
     </application>
 
 </manifest>
