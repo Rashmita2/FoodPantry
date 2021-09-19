@@ -177,6 +177,8 @@ public class Inventory extends AppCompatActivity implements MyRecyclerViewAdapte
         intent.putExtra("Product ID",mlist.get(position).getId().toString());
         intent.putExtra("Product DOE",mlist.get(position).getProductDoe());
         intent.putExtra("Product Amount",mlist.get(position).getProductAmount().toString());
+        //Log.d(TAG,"onInventoryClick:clicked." +mlist.get(position).getProductImageUrl() );
+        intent.putExtra("URL",mlist.get(position).getProductImageUrl());
         String newposition=String.valueOf(position);
         intent.putExtra("Product position",newposition);
 

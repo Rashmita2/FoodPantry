@@ -6,57 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".Additem">
 
+    <Button
+        android:id="@+id/newimagebtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pick New Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
+
+    <ImageView
+        android:id="@+id/editemimage"
+        android:layout_width="231dp"
+        android:layout_height="233dp"
+        app:layout_constraintBottom_toTopOf="@+id/edititemupdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edititempid"
+        app:layout_constraintVertical_bias="0.268"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_light_focused"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="85dp"
         android:layout_height="51dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginBottom="603dp"
+        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Amount"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
-        app:layout_constraintEnd_toStartOf="@+id/edititemnumber"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        android:background="#FFFFFF" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="85dp"
         android:layout_height="51dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="552dp"
+        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="DOE"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
-        app:layout_constraintEnd_toStartOf="@+id/edititemdoe"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        android:background="#FFFFFF" />
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="85dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="297dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginBottom="293dp"
+        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="ID"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edititemupdate"
-        app:layout_constraintEnd_toStartOf="@+id/edititempid"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/newimagebtn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
-        android:background="#FFFFFF" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
     <Button
         android:id="@+id/edititemdelete"
@@ -68,7 +99,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.887" />
+        app:layout_constraintVertical_bias="0.922" />
 
     <Button
         android:id="@+id/edititemupdate"
@@ -80,7 +111,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
+        app:layout_constraintVertical_bias="0.852" />
 
     <EditText
         android:id="@+id/edititempid"
@@ -93,7 +124,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintVertical_bias="0.263" />
 
     <EditText
         android:id="@+id/edititemdoe"
@@ -107,7 +138,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintVertical_bias="0.188" />
 
     <EditText
         android:id="@+id/edititemnumber"
@@ -120,7 +151,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <EditText
         android:id="@+id/edititemname"
@@ -134,7 +165,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <Button
         android:id="@+id/edititemcancel"
@@ -152,18 +183,21 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="85dp"
         android:layout_height="51dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="629dp"
+        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/edititemname"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#FFFFFF" />
+        app:layout_constraintVertical_bias="0.038" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

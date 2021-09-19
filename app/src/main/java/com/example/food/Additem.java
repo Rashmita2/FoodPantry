@@ -61,7 +61,7 @@ public class Additem extends AppCompatActivity {
     ImageView pimage;
     Button okbtn;
     Button takephotobtn;
-Button cancelbtn;
+    Button cancelbtn;
     FirebaseAuth fAuth;
     FirebaseDatabase rootNode;
     DatabaseReference reference;
