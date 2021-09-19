@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -38,7 +40,7 @@ public class Inventory extends AppCompatActivity implements MyRecyclerViewAdapte
     Button sortbyid,sortbyamount,sortbyname,sortbydoe;
     FirebaseAuth fAuth;
     String userID;
-
+    int Clickcount;
     private RecyclerView recyclerView;
     private List<Getterforview> mlist;
 
@@ -106,38 +108,79 @@ public class Inventory extends AppCompatActivity implements MyRecyclerViewAdapte
                  sortbyamount=findViewById(R.id.inventorysortamount);
                  sortbydoe=findViewById(R.id.inventorysortdate);
 
+
+
+
                 sortbyid.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Collections.sort(mlist);
-                        adapter.notifyDataSetChanged();
+                        Clickcount=Clickcount+1;
+                        if(Clickcount==1){
+                            Clickcount=Clickcount+1;
+                            Collections.sort(mlist);
+                            adapter.notifyDataSetChanged();
+                        }else if(Clickcount>1){
+                            Clickcount=0;
+                            Collections.sort(mlist,Getterforview.pid);
+                            adapter.notifyDataSetChanged();
+                        }
+
 
                     }
                 });
                 sortbyname.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Collections.sort(mlist,Getterforview.pname);
-                        adapter.notifyDataSetChanged();
+                        Clickcount=Clickcount+1;
+                        if(Clickcount==1){
+                            Clickcount=Clickcount+1;
+                            Collections.sort(mlist,Getterforview.pname);
+                            adapter.notifyDataSetChanged();
+                        }else if(Clickcount>1){
+                            Clickcount=0;
+                            Collections.sort(mlist,Getterforview.pname2);
+                            adapter.notifyDataSetChanged();
+                        }
+
 
                     }
                 });
+
                 sortbyamount.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Collections.sort(mlist,Getterforview.pamount);
-                        adapter.notifyDataSetChanged();
+                        Clickcount=Clickcount+1;
+                        if(Clickcount==1){
+                            Clickcount=Clickcount+1;
+                            Collections.sort(mlist,Getterforview.pamount);
+                            adapter.notifyDataSetChanged();
+                        }else if(Clickcount>1){
+                            Clickcount=0;
+                            Collections.sort(mlist,Getterforview.pamount2);
+                            adapter.notifyDataSetChanged();
+                        }
+
 
                     }
                 });
                 sortbydoe.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Collections.sort(mlist,Getterforview.pdoe);
-                        adapter.notifyDataSetChanged();
+                        Clickcount=Clickcount+1;
+                        if(Clickcount==1){
+                            Clickcount=Clickcount+1;
+                            Collections.sort(mlist,Getterforview.pdoe);
+                            adapter.notifyDataSetChanged();
+                        }else if(Clickcount>1){
+                            Clickcount=0;
+                            Collections.sort(mlist,Getterforview.pdoe2);
+                            adapter.notifyDataSetChanged();
+                        }
+
 
                     }
                 });
+
 
             }
 
