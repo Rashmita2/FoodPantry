@@ -12,6 +12,11 @@
         <entry key="..\:/displaywithimage/food/app/src/main/res/layout/edititem.xml" value="0.264" />
         <entry key="..\:/displaywithimage/food/app/src/main/res/layout/item.xml" value="0.264" />
         <entry key="..\:/displaywithimage/food/app/src/main/res/layout/password_reset.xml" value="0.17518248175182483" />
+        <entry key="app/src/main/res/layout/activity_inventory.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1234375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_passwordreset.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.16770833333333332" />
       </map>
     </option>
   </component>
